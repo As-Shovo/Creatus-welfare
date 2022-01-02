@@ -9,13 +9,19 @@
 //     updateProfile,
 // } from "firebase/auth";
 // import { useEffect, useState } from "react";
-// import initAuth from "../Friebase/firebase.init";
-// initAuth();
+// import initializeFirebaseAuth from "../Friebase/firebase.init";
+
+// initializeFirebaseAuth();
+
+
 // const useFirebase = () => {
 //     const auth = getAuth();
 //     const [user, setUser] = useState({});
 //     const [isLoading, setIsLoading] = useState(true);
 //     // const [admin, setAdmin] = useState(false);
+
+//     //================= google sign in=============
+
 //     const logInUsingGoogle = (history, location) => {
 //         setIsLoading(true);
 //         const provider = new GoogleAuthProvider();
@@ -35,6 +41,8 @@
 //                 setIsLoading(false);
 //             });
 //     };
+
+//     //=========================login with email ==================
 
 //     const signUpWithEmailAndPassword = (email, password, name, history) => {
 //         setIsLoading(true);
@@ -73,6 +81,8 @@
 //             .finally(() => setIsLoading(false));
 //     };
 
+
+//     //==================logout========================
 
 //     const logOut = () => {
 //         signOut(auth)
