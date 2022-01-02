@@ -5,6 +5,7 @@ const Banner = () => {
         <div>
             <h1>This is banner</h1>
             <h1>This is banner</h1>
+            <h1>This is banner</h1>
         </div>
     );
 };
