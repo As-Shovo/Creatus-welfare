@@ -22,10 +22,7 @@ const Login = () => {
     //     logInUsingGoogle(history, location);
     // };
 
-    // const handleLogIn = (e) => {
-    //     e.preventDefault();
-    //     emailAndPasswordSignIn(email, password, location, history);
-    // };
+
     return (
         <div>
             <Row xs={12} md={12} className='g-4 m-0 p-5 d-flex justify-content-center align-items-center'>
