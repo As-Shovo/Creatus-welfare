@@ -33,11 +33,6 @@ const Login = () => {
                     <div className='my-5 mx-auto w-75'>
                         <form>
                             <h3 className='text-center custom-text-primary fw-bold my-3'>Sign In</h3>
-                            <div className='d-flex justify-content-center align-items-center'>
-                                <div className='underline'></div>
-                                <div className='underline-small'></div>
-                                <div className='underline'></div>
-                            </div>
                             <div className="mb-3 my-5">
                                 <label htmlFor="exampleInputEmail1" className="form-label"><i className="fas fa-envelope-square custom-text-warning me-2"></i>E-mail</label>
                                 <input type="email" className="form-control" required />

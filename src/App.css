@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+}.custom-text-warning{
+  color : #F15B43;
+}
+.custom-button{
+  background-color: #F15B43;
+  color: #fff8dc;
+  border: 0;
+  padding: 10px 15px;
+  font-weight: 600;
+
 }
 
 .App-logo {
