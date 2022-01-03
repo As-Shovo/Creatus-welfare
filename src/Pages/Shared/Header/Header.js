@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useAuth from '../../../Hooks/useAuth'
+// import useAuth from '../../../Hooks/useAuth'
 
 const Header = () => {
 
@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='p-2'>
         <Container>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand as={Link} to="/">
              Chirity
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -18,6 +18,7 @@ const Header = () => {
                 <Nav className="ms-auto nav-item">
                     <Nav.Link as={Link} to='/home'>Home</Nav.Link>
                     <Nav.Link as={Link} to='/contact'>Contact</Nav.Link>
+                    <Nav.Link as={Link} to='/login'>Login</Nav.Link>
                     {/* {user.email &&
                         <div className=' d-flex justify-content-between align-items-center'>
                             <img src={user.photoURL} alt="" className=' img-fluid' style={{ width: '40px', borderRadius: '50%' }} />

@@ -1,110 +1,152 @@
-// import {
-//     createUserWithEmailAndPassword,
-//     getAuth,
-//     GoogleAuthProvider,
-//     onAuthStateChanged,
-//     signInWithEmailAndPassword,
-//     signInWithPopup,
-//     signOut,
-//     updateProfile,
-// } from "firebase/auth";
-// import { useEffect, useState } from "react";
-// import initAuth from "../Friebase/firebase.init";
-// initAuth();
-// const useFirebase = () => {
-//     const auth = getAuth();
-//     const [user, setUser] = useState({});
-//     const [isLoading, setIsLoading] = useState(true);
-//     // const [admin, setAdmin] = useState(false);
-//     const logInUsingGoogle = (history, location) => {
-//         setIsLoading(true);
-//         const provider = new GoogleAuthProvider();
-//         signInWithPopup(auth, provider)
-//             .then((result) => {
-//                 setUser(result.user)
+import { useState } from 'react';
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 
-//             })
-//             .then(() => {
-//                 const destination = location?.state?.from || "/";
-//                 history.replace(destination);
-//             })
-//             .catch((error) => {
-//                 console.log(error.message);
-//             })
-//             .finally(() => {
-//                 setIsLoading(false);
-//             });
-//     };
+import intializeFirebase from '../Friebase/firebase.init';
+import { useEffect } from 'react';
 
-//     const signUpWithEmailAndPassword = (email, password, name, history) => {
-//         setIsLoading(true);
-//         createUserWithEmailAndPassword(auth, email, password)
-//             .then((result) => {
-//                 // saveUser(email, name, "POST");
-//                 updateProfile(auth.currentUser, {
-//                     displayName: name,
-//                 });
-//                 history.replace("/");
+intializeFirebase();
 
-//                 console.log(result.user);
-//             })
+const useFirebase = () => {
 
-//             .catch((error) => {
-//                 console.log(error.message);
-//             })
-//             .finally(() => setIsLoading(false));
-//     };
-//     const emailAndPasswordSignIn = (email, password, location, history) => {
-//         setIsLoading(true);
-//         signInWithEmailAndPassword(auth, email, password)
-//             .then((result) => {
-//                 // Signed in
-//                 // ...
+    const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
 
-//                 const destination = location?.state?.from || "/";
-//                 history.replace(destination);
+    const auth = getAuth();
 
-//                 console.log(result.user);
-//             })
-//             .catch((error) => {
-//                 const errorMessage = error.message;
-//                 console.log(errorMessage);
-//             })
-//             .finally(() => setIsLoading(false));
-//     };
+    const signInUsingGoogle = (location, history) => {
+        setIsLoading(true);
+        const googleProvider = new GoogleAuthProvider();
+
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                setUser(result.user);
+
+                // redirect 
+                const destination = location?.state.from || '/';
+                history.push(destination);
 
 
-//     const logOut = () => {
-//         signOut(auth)
-//             .then(() => {
-//                 // Sign-out successful.
-//             })
-//             .catch((error) => {
-//                 // An error happened.
-//                 console.log(error.message);
-//             })
-//             .finally(() => setIsLoading(false));
-//     };
-//     useEffect(() => {
-//         onAuthStateChanged(auth, (user) => {
-//             if (user) {
-//                 setUser(user);
-//             } else {
-               
-//                 setUser({});
-//             }
-//             setIsLoading(false);
-//         });
-//     }, [auth]);
 
-//     return {
-//         logInUsingGoogle,
-//         signUpWithEmailAndPassword,
-//         emailAndPasswordSignIn,
-//         logOut,
-//         user,
-//         setUser,
-//         isLoading,
-//     };
-// };
-// export default useFirebase;
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user)
+                // ...
+            } else {
+                // User is signed out
+
+            }
+            setIsLoading(false)
+        });
+    }, [auth]);
+
+
+
+    const emailPasswordCreateUser = (email, password, name, history) => {
+        setIsLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                // Signed in 
+                setUser(result.user);
+
+                updateUser(name);
+
+                history.push('/');
+
+
+                // -----------------
+                //save user to the database
+
+                // ...
+            })
+            .catch((error) => {
+
+                console.log(error.message);
+                // ..
+            })
+            .finally(() => setIsLoading(false));
+    };
+
+    const signInEmailPasswordUser = (email, password, location, history) => {
+        setIsLoading(true);
+        // console.log(email);
+        signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                // Signed in 
+                setUser(result.user)
+                // ...
+
+                const destination = location?.state.from || '/';
+                history.push(destination);
+
+
+            })
+            .catch((error) => {
+
+                console.log(error.message)
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+
+    const updateUser = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        }).then(() => {
+            // Profile updated!
+            // ...
+        }).catch((error) => {
+            // An error occurred
+            // ...
+        });
+    };
+
+
+
+    // send user Data base 
+    // const saveUser = (email, displayName, method) => {
+    //     const user = { email, displayName };
+        // setIsLoading(true);
+
+        // fetch('https://aqueous-temple-04914.herokuapp.com/users', {
+        //     method: method,
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(user)
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         console.log(result);
+                // setIsLoading(false);
+    //         })
+    // };
+
+
+    // logout
+    const handleSignOut = () => {
+        signOut(auth).then(() => {
+            setUser('')
+        }).catch((error) => {
+            // An error happened.
+        });
+    }
+
+
+
+    return {
+        user,
+        signInUsingGoogle,
+        handleSignOut,
+        emailPasswordCreateUser,
+        signInEmailPasswordUser,
+        isLoading,
+    };
+};
+
+export default useFirebase;

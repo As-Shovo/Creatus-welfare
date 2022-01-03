@@ -29,7 +29,7 @@ const Login = () => {
     return (
         <div>
             <Row xs={12} md={12} className='g-4 m-0 p-5 d-flex justify-content-center align-items-center'>
-                <Col>
+                <Col md={6}>
                     <div className='my-5 mx-auto w-75'>
                         <form>
                             <h3 className='text-center custom-text-primary fw-bold my-3'>Sign In</h3>
@@ -53,7 +53,7 @@ const Login = () => {
                         </form>
                     </div>
                 </Col>
-                <Col >
+                <Col md={6}>
                     <img src="https://t3.ftcdn.net/jpg/03/39/70/90/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg" alt="" className='img-fluid' />
                 </Col>
             </Row>
