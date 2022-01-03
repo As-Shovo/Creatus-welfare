@@ -13,7 +13,7 @@ const useFirebase = () => {
 
     const auth = getAuth();
 
-    const signInUsingGoogle = (location, history) => {
+    const signInUsingGoogle = (location, navigate) => {
         setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
 
@@ -23,7 +23,7 @@ const useFirebase = () => {
 
                 // redirect 
                 const destination = location?.state.from || '/';
-                history.push(destination);
+                navigate(destination);
 
 
 
@@ -47,7 +47,7 @@ const useFirebase = () => {
 
 
 
-    const emailPasswordCreateUser = (email, password, name, history) => {
+    const emailPasswordCreateUser = (email, password, name) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
@@ -55,8 +55,6 @@ const useFirebase = () => {
                 setUser(result.user);
 
                 updateUser(name);
-
-                history.push('/');
 
 
                 // -----------------
@@ -72,7 +70,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     };
 
-    const signInEmailPasswordUser = (email, password, location, history) => {
+    const signInEmailPasswordUser = (email, password, location, navigate) => {
         setIsLoading(true);
         // console.log(email);
         signInWithEmailAndPassword(auth, email, password)
@@ -82,7 +80,7 @@ const useFirebase = () => {
                 // ...
 
                 const destination = location?.state.from || '/';
-                history.push(destination);
+                navigate(destination);
 
 
             })
@@ -107,25 +105,6 @@ const useFirebase = () => {
     };
 
 
-
-    // send user Data base 
-    // const saveUser = (email, displayName, method) => {
-    //     const user = { email, displayName };
-        // setIsLoading(true);
-
-        // fetch('https://aqueous-temple-04914.herokuapp.com/users', {
-        //     method: method,
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(user)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => {
-        //         console.log(result);
-                // setIsLoading(false);
-    //         })
-    // };
 
 
     // logout
