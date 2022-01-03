@@ -40,7 +40,7 @@ const Login = () => {
                             </div>
 
                             <div>
-                                <p className='custom-cursor-style text-primary'> Forgot Password ? </p>
+                                <p className='custom-cursor-style text-primary'> Forgot Password-? </p>
                                 <Button onClick={handleLogIn} className='mt-2 px-4  py-2'>Login</Button>
                                 <Button className='ms-3 mt-2 custom-button' onClick={handleGoogleLogIn} ><i className="fab fa-google text-white fs-6 px-4 py-1 "></i></Button>
                                 <p className=' mt-4'>Don't have an account?<Link to='/register'> Sign Up</Link></p>
