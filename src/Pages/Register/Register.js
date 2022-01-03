@@ -44,7 +44,7 @@ const Register = () => {
                 </div>
                 <Button type="submit" className="custom-button text-white me-3">Sign Up</Button>
 
-                <p className=' mt-4 text-center '>Already have an Account? <Link to='/login'> Please Login</Link> </p>
+                <p className=' mt-4 text-center '>Already have an Account ? <Link to='/login'> Please Login</Link> </p>
 
             </form>
         </div>
