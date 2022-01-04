@@ -5,6 +5,7 @@ import Banner from './Banner/Banner';
 import BecomeVolunteer from './BecomeVolunteer/BecomeVolunteer'
 import Volunteers from './Volunteers/Vlounteers'
 import Causes from './Caueses/Causes'
+import Reviews from './Reviews/Reviews';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Causes></Causes>
             <BecomeVolunteer></BecomeVolunteer>
             <Volunteers></Volunteers>
+            <Reviews></Reviews>
             <Footer></Footer>
         </div>
     );
