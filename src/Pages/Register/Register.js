@@ -25,7 +25,6 @@ const Register = () => {
 
 
 
-
     return (
         <div className='w-50 mx-auto'>
             <form onSubmit={registerForm}>
