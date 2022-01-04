@@ -3,7 +3,7 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import Banner from './Banner/Banner';
 import BecomeVolunteer from './BecomeVolunteer/BecomeVolunteer'
-import Volunteers from './Volunteers'
+import Volunteers from './Volunteers/Vlounteers'
 
 const Home = () => {
     return (
