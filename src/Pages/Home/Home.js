@@ -1,10 +1,14 @@
 import React from 'react';
+import Header from '../Shared/Header/Header';
+import Banner from './Banner/Banner';
+import BecomeVolunteer from './BecomeVolunteer/BecomeVolunteer'
 
 const Home = () => {
     return (
         <div>
-            <h1>THis is home</h1>
-            <h2> Hero Section change </h2>
+            <Header></Header>
+            <Banner></Banner>
+            <BecomeVolunteer></BecomeVolunteer>
         </div>
     );
 };

@@ -3,6 +3,9 @@
 }.custom-text-warning{
   color : #F15B43;
 }
+.custom-text-primary{
+  color: #263b5c;
+}
 .custom-button{
   background-color: #F15B43;
   color: #fff8dc;

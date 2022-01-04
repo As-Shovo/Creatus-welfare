@@ -1,0 +1,22 @@
+[
+    {
+        "id" : 1,
+        "title" : "Founder",
+        "img" : "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/member1.jpg"
+    },
+    {
+        "id" : 2,
+        "title" : "Chairman",
+        "img" : "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/member4.jpg"
+    },
+    {
+        "id" : 3,
+        "title" : "CEO",
+        "img" : "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/member3.jpg"
+    },
+    {
+        "id" : 4,
+        "title" : "Co-Founder",
+        "img" : "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/member2.jpg"
+    }
+]
