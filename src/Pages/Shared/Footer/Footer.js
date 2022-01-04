@@ -35,8 +35,8 @@ const Footer = () => {
 
                             <div className="col-lg-4 col-sm-6 newsletter">
                                 <h4>Our Newsletter</h4>
-                                <p>Subscribe to our newsletter to receive latest updates</p>
-                                <form action="" method=""><input type="email" name="email" /><input type="submit" value="Subscribe" /></form>
+                                <p className='text-white'>Subscribe to our newsletter to receive latest updates</p>
+                                <form action="" method=""><input type="email" name="email"  /><input type="submit" value="Subscribe" /></form>
 
 
                             </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <p >
+                                <p className='text-white'>
                                     Copyright &copy; <span id="currentYear"></span> Creatus Welfare | A Team Project by "Team 151"
                                 </p>
                             </div>

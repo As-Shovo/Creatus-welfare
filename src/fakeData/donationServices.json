@@ -2,85 +2,43 @@
     {
         "id": 1,
         "title": "Animal Charity Funds",
-        "description": "Give Your Helping hand towards the untold poor souls",
-        "price": "45,000 20,000 25,000",
+        "description": "Give Your Helping hand towards the untold poor souls.",
+        "price": "45,000 ",
         "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause29.jpg"
     },
     {
         "id": 2,
         "title": "Spreading Light of Education",
-        "description": "If poor will well educated, you and you country will be rich.Cause educated nation is a blessing for one country",
-        "price": "47,000 30,000 15,000",
+        "description": "If poor will well educated, you and you country will be rich.",
+        "price": "47,000 ",
         "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause3.jpg"
     },
     {
         "id": 3,
         "title": "Medical Camp",
-        "description": "We have to careful and helpful to poor people always.Our goal is to help people from our heart",
-        "price": "60,000 35,000 24,000",
+        "description": "Our goal is to help people from our heart.We hlep poor people always.",
+        "price": "60,000",
         "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause10.jpg"
     },
     {
         "id": 4,
         "title": "Emergency Food",
-        "description": "Donate now to forward for poor at this pandemic time.For the people of the people",
-        "price": "65,000 75,000 19,000",
+        "description": "Donate now to forward for poor at this pandemic time. We can care poor people.",
+        "price": "65,000 ",
         "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause24.jpg"
     },
     {
         "id": 5,
         "title": "Prothesis Help",
-        "description": "Creatus always offers for everybody to enrich knowledge.We help people through implementing artificial body parts and give smile on their face",
-        "price": "77,000 50,000 22,000",
+        "description": "Creatus always offers for everybody to enrich knowledge.",
+        "price": "77,000 ",
         "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause27.jpg"
     },
     {
         "id": 6,
         "title": "Helping Tribals",
-        "description": "What takes an online fundraising site from good to great?By Tribals they can grow their lifestyle.",
-        "price": "82,000 32,000 39,000",
+        "description": "What takes an online fundraising site from good to great?",
+        "price": "82,000 ",
         "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause21.jpg"
-    },
-    {
-        "id": 7,
-        "title": "Free Medicine",
-        "description": "How to Survive a Recession When the Future Feels Uncertain.",
-        "price": "89,000 52,000 35,000",
-        "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause28.jpg"
-    },
-    {
-        "id": 8,
-        "title": "Educating Illiterate People",
-        "description": "People can help others but can not do for a social restriction. Our goal is no one will remain illiterate",
-        "price": "56,000 38,000 33,000",
-        "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause22.jpg"
-    },
-    {
-        "id": 9,
-        "title": "Ensuring Safe Water",
-        "description": "Let them take pure water from country government.We always try to",
-        "price": "78,000 87,000 54,000",
-        "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause1.jpg"
-    },
-    {
-        "id": 10,
-        "title": "Child Feeding",
-        "description": "Donate now to help the helpless Child authentically",
-        "price": "65,000 76,000 23,000",
-        "img": "https://www.devsnews.com/wp/donakion/wp-content/uploads/2021/10/cause26.jpg"
-    },
-    {
-        "id": 11,
-        "title": "Helping Refugees",
-        "description": "We are here to help the refugees and ensuring them safe housinh.",
-        "price": "65,000 76,000 45,000",
-        "img": "https://www.worldbank.org/content/dam/photos/780x439/2018/jun-2/Rohingya--refugees--exhausted--streaming--off--boats--arriving--on--the--beach--Shamlapur--village---Bangladesh---2017-09-06.jpg"
-    },
-    {
-        "id": 12,
-        "title": "Helping Fire burned victims",
-        "description": "Helping fire burned people and ensuring them emergency health and food",
-        "price": "57,000 48,000 43,000",
-        "img": "https://www.theborneopost.com/newsimages/2013/06/oi-dato.9-must-use.jpg"
     }
 ]
