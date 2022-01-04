@@ -1,11 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from '../src/Pages/Shared/Header/Header'
-import Home from '../src/Pages/Home/Home'
-import About from '../src/Pages/About/About'
-import Register from '../src/Pages/Register/Register'
-import Login from '../src/Pages/Login/Login'
-import NotFound from '../src/Pages/NotFound/NotFound'
+import Home from '../src/Pages/Home/Home';
+import About from '../src/Pages/About/About';
+import Register from '../src/Pages/Register/Register';
+import Login from '../src/Pages/Login/Login';
+import NotFound from '../src/Pages/NotFound/NotFound';
 
 
 function App() {
@@ -21,7 +20,7 @@ function App() {
           <Route path='*' element={<NotFound></NotFound>} />
         </Routes>
       </Router>
-    </div>
+      </div>
   );
 }
 
