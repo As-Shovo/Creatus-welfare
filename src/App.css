@@ -3,6 +3,14 @@
 }.custom-text-warning{
   color : #F15B43;
 }
+.custom-text-primary{
+  color: #263b5c;
+}
+
+p{
+  color: gray;
+  font-size: 18px;
+}
 .custom-button{
   background-color: #F15B43;
   color: #fff8dc;
@@ -10,6 +18,10 @@
   padding: 10px 15px;
   font-weight: 600;
 
+}
+.custom-margin{
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .App-logo {
