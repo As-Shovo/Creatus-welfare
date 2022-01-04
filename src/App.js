@@ -6,6 +6,7 @@ import Register from '../src/Pages/Register/Register';
 import Login from '../src/Pages/Login/Login';
 import NotFound from '../src/Pages/NotFound/NotFound';
 import AuthProvider from '../src/context/AuthProvider'
+import Footer from '../src/Pages/Shared/Footer/Footer'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path='login' element={<Login></Login>} />
             <Route path='*' element={<NotFound></NotFound>} />
           </Routes>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
