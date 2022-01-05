@@ -6,9 +6,9 @@ import Register from '../Register';
 const RegisterItem = () => {
     return (
         <div>
-            <Header></Header>
+            
             <Register></Register>
-            <Footer></Footer>
+            
         </div>
     );
 };

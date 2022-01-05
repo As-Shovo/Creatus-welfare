@@ -3,19 +3,11 @@ import './Header.css'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logoImg from '../../../images/logo.png'
-<<<<<<< HEAD
 import useAuth from '../../../Hooks/useAuth'
 
 const Header = () => {
 
-    const {user, handleSignOut} = useAuth()
-=======
-import useAuth from '../../../Hooks/useAuth';
-
-const Header = () => {
-
     const { user, handleSignOut } = useAuth()
->>>>>>> a368215 ([MOD] -header and other)
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='p-3'>
@@ -30,26 +22,15 @@ const Header = () => {
                         <Nav.Link as={Link} to='/about' style={{ color: '#263b5c' }}>About</Nav.Link>
                         <Nav.Link as={Link} to='/contact' style={{ color: '#263b5c' }}>Contact</Nav.Link>
                         <Nav.Link as={Link} to='/causes' style={{ color: '#263b5c' }}>Causes</Nav.Link>
-<<<<<<< HEAD
-                        <Nav.Link as={Link} to='/dashboard' className='custom-button rounded-pill  text-white px-4'>Dashboard</Nav.Link>
-<<<<<<< HEAD
 
-=======
->>>>>>> a368215 ([MOD] -header and other)
+                        <Nav.Link as={Link} to='/dashboard' className='custom-button rounded-pill  text-white px-4'>Dashboard</Nav.Link>
+
                         {user.email &&
-=======
-                        <Nav.Link as={Link} to='/dashboard' className='bg-info rounded-pill  text-white px-4'>Dashboard</Nav.Link>
-                        {user.email && 
->>>>>>> f5d274a ([MOD] home, header)
                             <div className=' d-flex justify-content-between align-items-center'>
                                 <img src={user.photoURL} alt="" className=' img-fluid' style={{ width: '40px', borderRadius: '50%' }} />
                                 <span className='fw-bold custom-text-primary ms-2'>{user.displayName}</span>
                             </div>}
-<<<<<<< HEAD
-                        {user.email ? <span onClick={ handleSignOut} className=' custom-cursor '><i className="fas fa-sign-out-alt custom-text-primary me-2 fs-5 "></i>LogOut</span>
-=======
                         {user.email ? <span onClick={handleSignOut} className=' custom-cursor '><i className="fas fa-sign-out-alt custom-text-primary me-2 fs-5 "></i>LogOut</span>
->>>>>>> a368215 ([MOD] -header and other)
                             :
                             <Nav.Link as={Link} to='/login'><i className="fas fa-sign-in-alt custom-text-primary me-2 fs-5"></i>Login</Nav.Link>}
                     </Nav>

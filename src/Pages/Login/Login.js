@@ -3,7 +3,6 @@ import './Login.css'
 import { Button, Col, Row } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from "../../Hooks/useAuth";
-import Header from "../Shared/Header/Header";
 
 const Login = () => {
     const {signInEmailPasswordUser} = useAuth()
@@ -25,12 +24,8 @@ const Login = () => {
     };
 
     return (
-<<<<<<< HEAD
         <div>
-            <Header></Header>
-=======
-        <div className = 'my-5'>
->>>>>>> a368215 ([MOD] -header and other)
+           
             <Row xs={12} md={12} className='g-4 m-0 p-5 d-flex justify-content-center align-items-center'>
                 <Col md={6}>
                     <div className='my-5 mx-auto w-75'>
