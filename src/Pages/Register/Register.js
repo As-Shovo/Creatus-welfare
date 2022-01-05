@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import Header from "../Shared/Header/Header";
 
 const Register = () => {
 
@@ -26,7 +27,9 @@ const Register = () => {
 
 
     return (
-        <div className='w-50 mx-auto'>
+        <div>
+        <Header></Header>
+            <div className='w-50 mx-auto'>
             <form onSubmit={registerForm}>
                 <h3 className='text-center fw-bold mt-5'>Please Sign Up</h3>
                 <div className="mb-3 my-5">
@@ -46,6 +49,7 @@ const Register = () => {
                 <p className=' mt-4 text-center '>Already have an Account ? <Link to='/login'> Please Login</Link> </p>
 
             </form>
+        </div>
         </div>
     );
 };
