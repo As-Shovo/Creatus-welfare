@@ -19,7 +19,7 @@ const Footer = () => {
                                     <p><strong>Email:</strong> info@creatuswelfare.com</p>
                                 </div>
                             </div>
-
+                            {/* check */}
                             {/* // */}
 
                             <div className="col-lg-3 col-sm-6 footer-menus">
