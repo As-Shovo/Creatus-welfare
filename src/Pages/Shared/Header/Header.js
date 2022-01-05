@@ -30,12 +30,17 @@ const Header = () => {
                         <Nav.Link as={Link} to='/about' style={{ color: '#263b5c' }}>About</Nav.Link>
                         <Nav.Link as={Link} to='/contact' style={{ color: '#263b5c' }}>Contact</Nav.Link>
                         <Nav.Link as={Link} to='/causes' style={{ color: '#263b5c' }}>Causes</Nav.Link>
+<<<<<<< HEAD
                         <Nav.Link as={Link} to='/dashboard' className='custom-button rounded-pill  text-white px-4'>Dashboard</Nav.Link>
 <<<<<<< HEAD
 
 =======
 >>>>>>> a368215 ([MOD] -header and other)
                         {user.email &&
+=======
+                        <Nav.Link as={Link} to='/dashboard' className='bg-info rounded-pill  text-white px-4'>Dashboard</Nav.Link>
+                        {user.email && 
+>>>>>>> f5d274a ([MOD] home, header)
                             <div className=' d-flex justify-content-between align-items-center'>
                                 <img src={user.photoURL} alt="" className=' img-fluid' style={{ width: '40px', borderRadius: '50%' }} />
                                 <span className='fw-bold custom-text-primary ms-2'>{user.displayName}</span>
