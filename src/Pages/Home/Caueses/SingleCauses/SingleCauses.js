@@ -18,7 +18,11 @@ const SingleCauses = ({ causes }) => {
                         <small> <i className="fas fa-reply me-2"></i>To Go</small>
                     </div>
                     <div className='d-flex justify-content-between align-items-center'>
+<<<<<<< HEAD
                         <Link to={`/causes/${id}`}><Button className='custom-button px-4 py-2'>Donate <i className="fas fa-long-arrow-alt-right ms-2"></i></Button></Link>
+=======
+                        <Button className='custom-btn  px-4 py-2'>Donate <i className="fas fa-long-arrow-alt-right ms-2"></i></Button>
+>>>>>>> a436ac5 ([MOD]-fakedata)
                         <h5 className='text-info fw-bold' >${price}</h5>
                     </div>
                 </Card.Body>
