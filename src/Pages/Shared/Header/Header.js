@@ -7,7 +7,7 @@ import useAuth from '../../../Hooks/useAuth'
 
 const Header = () => {
 
-    const {user, logOut} = useAuth()
+    const {user, handleSignOut} = useAuth()
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className='p-3'>
@@ -29,7 +29,7 @@ const Header = () => {
                                 <img src={user.photoURL} alt="" className=' img-fluid' style={{ width: '40px', borderRadius: '50%' }} />
                                 <span className='fw-bold custom-text-primary ms-2'>{user.displayName}</span>
                             </div>}
-                        {user.email ? <span onClick={logOut} className=' custom-cursor '><i className="fas fa-sign-out-alt custom-text-primary me-2 fs-5 "></i>LogOut</span>
+                        {user.email ? <span onClick={ handleSignOut} className=' custom-cursor '><i className="fas fa-sign-out-alt custom-text-primary me-2 fs-5 "></i>LogOut</span>
                             :
                             <Nav.Link as={Link} to='/login'><i className="fas fa-sign-in-alt custom-text-primary me-2 fs-5"></i>Login</Nav.Link>}
                     </Nav>
