@@ -27,9 +27,13 @@ const Register = () => {
 
 
     return (
+<<<<<<< HEAD
         <div>
         <Header></Header>
             <div className='w-50 mx-auto'>
+=======
+        <div className='w-50 mx-auto my-5'>
+>>>>>>> a368215 ([MOD] -header and other)
             <form onSubmit={registerForm}>
                 <h3 className='text-center fw-bold mt-5'>Please Sign Up</h3>
                 <div className="mb-3 my-5">

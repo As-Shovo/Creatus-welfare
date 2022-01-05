@@ -40,6 +40,9 @@ p{
   margin-top: 150px;
   margin-bottom: 50px;
 }
+.custom-cursor{
+  cursor: pointer;
+}
 
 .App-logo {
   height: 40vmin;
