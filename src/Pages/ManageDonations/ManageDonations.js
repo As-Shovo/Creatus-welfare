@@ -8,8 +8,8 @@ const ManageDonations = () => {
 
 	//handle delete button
 
-	const handleDelete = id => {
-		const url = `https://warm-island-50331.herokuapp.com/products/${id}`;
+	const handleDelete = _id => {
+		const url = `https://lit-lowlands-70936.herokuapp.com/manageAllDonation/${_id}`;
 
 		const confirm = window.confirm("Are you sure to delete?");
 
@@ -22,7 +22,7 @@ const ManageDonations = () => {
 				if(data.deletedCount > 0) {
 					alert('Deleted Successfully');
 
-					const remainingFund = donations.filter(fund => fund._id !== id);
+					const remainingFund = donations.filter(fund => fund._id !== _id);
 					setDonations(remainingFund);
 
 				}

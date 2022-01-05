@@ -69,17 +69,17 @@ const Dashboard = () => {
                     {
                         admin&& */}
                         <li>
-                        <Link to={`${url}/manageOrder`} className="nav-link text-white px-0 align-middle py-2 sidenav-font ">
+                        <Link to={`dash/manageDonations`} className="nav-link text-white px-0 align-middle py-2 sidenav-font ">
 						<i className="fas fa-cog"></i> <span className=" d-sm-inline">Manage Donations</span></Link>
                     </li>
                     {/* }
                     {
                         !admin&& */}
                         <li>
-                        <Link to={`${url}`} className="nav-link text-white px-0 align-middle py-2 sidenav-font ">
-						<i className="fas fa-shopping-bag"></i> <span className=" d-sm-inline">My Orders</span></Link>
+                        <Link to={`dash/myDonations`} className="nav-link text-white px-0 align-middle py-2 sidenav-font ">
+						<i className="fas fa-shopping-bag"></i> <span className=" d-sm-inline">My Donations</span></Link>
 
-                        <Link to={`${url}`} className="nav-link text-white px-0 align-middle py-2 sidenav-font">
+                        <Link to={`dash/addReview`} className="nav-link text-white px-0 align-middle py-2 sidenav-font">
 						<i className="fas fa-star-half-alt"></i> <span className=" d-sm-inline">Review</span></Link>
 
                         <Link to={`${url}`} className="nav-link px-0 align-middle text-white py-2 sidenav-font">

@@ -9,6 +9,7 @@ import ManageFunds from './Pages/ManageFunds/ManageFunds';
 import ManageDonations from './Pages/ManageDonations/ManageDonations';
 import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
 import AddFund from './Pages/AddFund/AddFund'
+import AddReview from './Pages/AddReview/AddReview';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path='dashboard/dash/manageDonations' element={<ManageDonations></ManageDonations> } />
           <Route path='dashboard/dash/makeAdmin' element={<MakeAdmin></MakeAdmin> } />
           <Route path='dashboard/dash/addFund' element={<AddFund></AddFund> } />
-          <Route path='dashboard/dash/addReview' element={<MakeAdmin></MakeAdmin> } />
+          <Route path='dashboard/dash/addReview' element={<AddReview></AddReview> } />
           <Route path='*' element={<NotFound></NotFound>} />
         </Routes>
       </Router>

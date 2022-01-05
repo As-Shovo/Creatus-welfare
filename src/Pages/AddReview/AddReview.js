@@ -1,17 +1,17 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import useAuth from '../../hooks/useAuth';
+//import useAuth from '../../hooks/useAuth';
 
 const AddReview = () => {
 
 
-	const {user} = useAuth();
+	//const {user} = useAuth();
 	const {register, formState: { errors }, handleSubmit, reset} = useForm();
 
 	const onSubmit = data => {
 
-        axios.post('https://warm-island-50331.herokuapp.com/reviews', data)
+        axios.post('https://lit-lowlands-70936.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -24,14 +24,14 @@ const AddReview = () => {
 			<div className="container-fluid">
 			<div className="container-fluid ">
 				<h1 className="text-center mt-5 ">
-					Give Product Rating
+					Give Funds Rating
 				</h1>
 
 				<div className="row justify-content-center mt-5">
 
 				<div className="col-12 col-sm-6">
 				<form onSubmit={handleSubmit(onSubmit)}>
-				<input className="form-control mb-4" {...register("Customer_Name")} value={user.displayName} />
+				<input className="form-control mb-4" {...register("Customer_Name")} value={"user.displayName"} />
                 <input className="form-control mb-4" {...register("name")} placeholder="Product Name" />
                 <textarea className="form-control mb-4" {...register("description", { required: true, maxLength: 100 })} placeholder="How was the product?" />
                 <input className="form-control mb-4" type="number" {...register("rating", { min: 1, max: 5 })} placeholder="Rating (1-5)" />

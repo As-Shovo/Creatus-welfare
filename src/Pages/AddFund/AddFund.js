@@ -12,6 +12,7 @@ const AddFund = () => {
 
         axios.post('https://lit-lowlands-70936.herokuapp.com/funds', data)
             .then(res => {
+				console.log(res);
                 if (res.data.insertedId) {
                     alert('added successfully');
                     reset();
@@ -23,7 +24,7 @@ const AddFund = () => {
 			<div className="container-fluid">
 			<div className="container-fluid">
 				<h1 className="text-center mt-5 ">
-					Add a new Product
+					Add a new Fund
 				</h1>
 
 				<div className="row justify-content-center mt-5">
