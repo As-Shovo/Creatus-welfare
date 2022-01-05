@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-const useProducts = () => {
+const useFund = () => {
 	const [funds, setFunds] = useState([]);
 
 	useEffect(() => {
@@ -13,4 +13,4 @@ const useProducts = () => {
 	return [funds, setFunds];
 };
 
-export default useProducts;
+export default useFund;

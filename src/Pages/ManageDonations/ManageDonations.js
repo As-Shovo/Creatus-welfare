@@ -1,14 +1,15 @@
 import React from 'react';
-import useFund from '../../Hooks/useFund';
-const ManageFunds = () => {
+import useDonation from '../../Hooks/useDonation';
 
-	const [funds, setFunds] = useFund();
+const ManageDonations = () => {
+
+	const [donations, setDonations] = useDonation();
 
 
 	//handle delete button
 
-	const handleDelete = _id => {
-		const url = `https://lit-lowlands-70936.herokuapp.com/funds/${_id}`;
+	const handleDelete = id => {
+		const url = `https://warm-island-50331.herokuapp.com/products/${id}`;
 
 		const confirm = window.confirm("Are you sure to delete?");
 
@@ -21,8 +22,8 @@ const ManageFunds = () => {
 				if(data.deletedCount > 0) {
 					alert('Deleted Successfully');
 
-					const remainingFund = funds.filter(fund => fund._id !== _id);
-					setFunds(remainingFund);
+					const remainingFund = donations.filter(fund => fund._id !== id);
+					setDonations(remainingFund);
 
 				}
 			})
@@ -33,7 +34,7 @@ const ManageFunds = () => {
 	return (
 		<div>
 			<div className="container">
-			<h1 className="text-center my-5">Manage Funds</h1>
+			<h1 className="text-center my-5">Manage Product</h1>
 			</div>
 
 			<div className="container  ">
@@ -65,7 +66,7 @@ const ManageFunds = () => {
 
 			<div className="row">
 			{
-				funds.map(fund=> <div key={fund._id}>
+				donations.map(fund=> <div key={fund._id}>
 					<div className="col">
 				<div className="card pt-3 shadow-lg h-100">
 			  <div className="card-body">
@@ -96,4 +97,4 @@ const ManageFunds = () => {
 	);
 };
 
-export default ManageFunds;
+export default ManageDonations;
