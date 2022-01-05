@@ -4,7 +4,7 @@ import causesData from '../../../../fakeData/donationServices.json';
 
 const Donate = () => {
     const { id } = useParams();
-    const selectedData = causesData.filter(sd => sd.id == id);
+    const selectedData = causesData.filter(sd => parseInt(sd.id) === parseInt(id));
     console.log(selectedData);
     return (
         <div>
