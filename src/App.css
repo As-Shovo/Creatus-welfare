@@ -19,6 +19,23 @@ p{
   font-weight: 600;
 
 }
+
+.custom-btn:hover{
+ 
+    background-color: #F15B43;
+    color: #fff8dc;
+    border: 0;
+    padding: 15px 20px;
+    font-weight: 700;
+  
+}
+.custom-btn{
+  background-color: #fff;
+    color: #263b5c;
+    border: 2px solid rgb(224, 221, 221);
+    padding: 15px 20px;
+    font-weight: 700;
+}
 .custom-margin{
   margin-top: 150px;
   margin-bottom: 50px;
