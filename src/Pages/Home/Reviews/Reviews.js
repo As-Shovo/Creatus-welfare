@@ -15,7 +15,7 @@ const Reviews = () => {
 
     return (
 
-        <div className='my-5' >
+        <div className='custom-margin' >
             <div className='text-center'>
                 <p className='custom-text-warning '><i className="far fa-heart me-3"></i>Reviews</p>
                 <h1 className='custom-text-primary fw-bold'>Our Last Reviews</h1>
