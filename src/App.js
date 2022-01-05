@@ -7,6 +7,7 @@ import NotFound from '../src/Pages/NotFound/NotFound';
 import AuthProvider from '../src/context/AuthProvider'
 import AboutItem from './Pages/About/AboutItem/AboutItem';
 import ContactItem from './Pages/Contact/ContactItem/ContactItem';
+import Donate from './Pages/Home/Caueses/Donate/Donate';
 
 
 function App() {
@@ -16,12 +17,12 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<Home/>} />
-            <Route path='home' element={<Home/>} />
-            <Route path='about' element={<AboutItem/>} />
-           <Route path = 'contact' element = { <ContactItem/>} />
-            {/* <Route path = 'causes' element ={<Causes/>} /> */}
-            <Route path='register' element={<Register/>} />
-            <Route path='login' element={<Login/>} />
+            <Route path='/home' element={<Home/>} />
+            <Route path='/about' element={<AboutItem/>} />
+           <Route path = '/contact' element = { <ContactItem/>} />
+            <Route path = '/causes/:id' element ={<Donate/>} />
+            <Route path='/register' element={<Register/>} />
+            <Route path='/login' element={<Login/>} />
             <Route path='*' element={<NotFound/>} />
           </Routes>
         </Router>
