@@ -55,7 +55,7 @@ const Dashboard = () => {
 					{/* {
                         admin&& */}
                         <li>
-                        <Link to={`${url}/addProduct`} className="nav-link px-0 align-middle text-white py-2 sidenav-font">
+                        <Link to={`dash/addFund`} className="nav-link px-0 align-middle text-white py-2 sidenav-font">
 						<i className="fas fa-plus"></i> <span className=" d-sm-inline">Add Fund</span> </Link>
 
                         <Link to={`dash/manageFunds`} className="nav-link px-0 align-middle text-white py-2 sidenav-font">
